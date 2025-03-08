@@ -13,7 +13,16 @@
         }
         
         body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
             display: flex;
+            max-width: 1000px;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             min-height: 100vh;
         }
         
@@ -21,227 +30,238 @@
             width: 33%;
             background-color: #2c3e50;
             color: white;
-            padding: 2rem;
+            padding: 30px;
         }
         
         .main-content {
             width: 67%;
             background-color: white;
-            padding: 2rem;
+            padding: 30px;
         }
         
-        .name {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid white;
-            padding-bottom: 0.5rem;
+        .profile-name {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
         }
         
-        .position {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            font-weight: 500;
+        .profile-title {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 25px;
+            color: #ddd;
         }
         
         .contact-info {
-            margin-bottom: 2rem;
+            margin-bottom: 30px;
         }
         
-        .contact-item {
+        .info-item {
             display: flex;
             align-items: center;
-            margin-bottom: 0.8rem;
+            margin-bottom: 15px;
         }
         
-        .contact-icon {
+        .info-icon {
             margin-right: 10px;
-            width: 20px;
+            width: 16px;
             text-align: center;
         }
         
         .section-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
         }
         
-        .sidebar .section-title {
-            border-bottom: 2px solid white;
-            padding-bottom: 0.3rem;
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 50px;
+            height: 2px;
+            background-color: #3498db;
         }
         
-        .main-content .section-title {
-            color: #2c3e50;
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 0.3rem;
+        .sidebar .section-title::after {
+            background-color: #ecf0f1;
         }
         
         .language-item, .skill-item {
-            margin-bottom: 0.5rem;
+            margin-bottom: 15px;
         }
         
-        .language-level, .skill-level {
+        .language-name, .skill-name {
+            margin-bottom: 5px;
+        }
+        
+        .language-level {
             display: flex;
-            margin-top: 0.2rem;
         }
         
         .level-dot {
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background-color: white;
+            background-color: #3498db;
             margin-right: 5px;
         }
         
         .level-dot.empty {
             background-color: transparent;
-            border: 1px solid white;
+            border: 1px solid #3498db;
+        }
+        
+        .section {
+            margin-bottom: 30px;
         }
         
         .job {
-            margin-bottom: 1.5rem;
+            margin-bottom: 20px;
         }
         
         .job-title {
             font-weight: 600;
-            font-size: 1.1rem;
-            color: #2c3e50;
+            font-size: 18px;
+            margin-bottom: 5px;
         }
         
         .job-details {
-            display: flex;
-            justify-content: space-between;
             font-style: italic;
-            margin: 0.3rem 0;
-            color: #777;
+            color: #666;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .job-description {
+            font-size: 15px;
         }
         
         .education-item {
-            margin-bottom: 1rem;
+            margin-bottom: 15px;
         }
         
         .education-title {
             font-weight: 600;
-            color: #2c3e50;
+            margin-bottom: 5px;
         }
         
-        .education-date {
+        .education-details {
             font-style: italic;
-            color: #777;
-            font-size: 0.9rem;
+            color: #666;
+            font-size: 14px;
         }
         
         .personal-description {
-            margin-bottom: 2rem;
-            line-height: 1.6;
+            font-size: 15px;
+            margin-bottom: 30px;
+            line-height: 1.7;
         }
     </style>
 </head>
 <body>
-    <!-- Columna Lateral (33%) -->
-    <div class="sidebar">
-        <div class="name">Isaac Bolaños Corrales</div>
-        <div class="position">Técnico en soporte IT</div>
-        
-        <div class="contact-info">
-            <div class="contact-item">
-                <div class="contact-icon">&#9743;</div>
-                <div>+506 606-03711</div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile">
+                <h1 class="profile-name">Isaac Bolaños Corrales</h1>
+                <p class="profile-title">Técnico en soporte IT</p>
             </div>
-            <div class="contact-item">
-                <div class="contact-icon">&#9993;</div>
-                <div>bolanosisaac45@gmail.com</div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">Idiomas</div>
-            <div class="language-item">
-                <div>Español</div>
-                <div class="language-level">
-                    <div class="level-dot"></div>
-                    <div class="level-dot"></div>
-                    <div class="level-dot"></div>
-                    <div class="level-dot"></div>
-                    <div class="level-dot"></div>
+            
+            <div class="contact-info">
+                <div class="info-item">
+                    <span class="info-icon">&#9993;</span>
+                    <span>bolanosisaac45@gmail.com</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">&#9742;</span>
+                    <span>+506 606-03711</span>
                 </div>
             </div>
-            <div class="language-item">
-                <div>Inglés</div>
-                <div class="language-level">
-                    <div class="level-dot"></div>
-                    <div class="level-dot"></div>
-                    <div class="level-dot"></div>
-                    <div class="level-dot empty"></div>
-                    <div class="level-dot empty"></div>
+            
+            <div class="section">
+                <h2 class="section-title">Idiomas</h2>
+                <div class="language-item">
+                    <div class="language-name">Español</div>
+                    <div class="language-level">
+                        <div class="level-dot"></div>
+                        <div class="level-dot"></div>
+                        <div class="level-dot"></div>
+                        <div class="level-dot"></div>
+                        <div class="level-dot"></div>
+                    </div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">Inglés</div>
+                    <div class="language-level">
+                        <div class="level-dot"></div>
+                        <div class="level-dot"></div>
+                        <div class="level-dot"></div>
+                        <div class="level-dot empty"></div>
+                        <div class="level-dot empty"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="section" style="margin-top: 2rem;">
-            <div class="section-title">Características</div>
-            <div class="skill-item">&#10003; Autodidacta</div>
-            <div class="skill-item">&#10003; Innovador</div>
-            <div class="skill-item">&#10003; Práctico y aplicado</div>
-            <div class="skill-item">&#10003; Multidisciplinario</div>
-            <div class="skill-item">&#10003; Apasionado por la tecnología</div>
-        </div>
-    </div>
-    
-    <!-- Contenido Principal (67%) -->
-    <div class="main-content">
-        <div class="section">
-            <div class="section-title">Perfil</div>
-            <div class="personal-description">
-                Soy una persona autodidacta, creativa y resolutiva, apasionada por la innovación y el aprendizaje constante. Me gusta enfrentar desafíos con una mentalidad analítica y adaptable, buscando siempre optimizar y personalizar soluciones.
+            
+            <div class="section">
+                <h2 class="section-title">Características</h2>
+                <ul class="skills-list">
+                    <li class="skill-item">Autodidacta</li>
+                    <li class="skill-item">Innovador</li>
+                    <li class="skill-item">Práctico y aplicado</li>
+                    <li class="skill-item">Multidisciplinario</li>
+                    <li class="skill-item">Apasionado por la tecnología</li>
+                </ul>
             </div>
         </div>
         
-        <div class="section">
-            <div class="section-title">Experiencia Laboral</div>
-            <div class="job">
-                <div class="job-title">Desarrollador Full Stack</div>
-                <div class="job-details">
-                    <div>Zenith, Remoto</div>
-                    <div>Nov 2024 - Feb 2025</div>
-                </div>
-                <div class="job-description">
-                    Desarrollo de una aplicación web completa de inicio a fin.
+        <div class="main-content">
+            <div class="section">
+                <h2 class="section-title">Perfil</h2>
+                <p class="personal-description">
+                    Soy una persona autodidacta, creativa y resolutiva, apasionada por la innovación y el aprendizaje constante. Me gusta enfrentar desafíos con una mentalidad analítica y adaptable, buscando siempre optimizar y personalizar soluciones.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Experiencia Laboral</h2>
+                <div class="job">
+                    <h3 class="job-title">Desarrollador Full Stack</h3>
+                    <p class="job-details">Zenith, Remoto | Nov 2024 - Feb 2025</p>
+                    <p class="job-description">Desarrollo de una aplicación web completa de inicio a fin.</p>
                 </div>
             </div>
-        </div>
-        
-        <div class="section">
-            <div class="section-title">Formación</div>
-            <div class="education-section">
-                <div class="education-subtitle">Cursos y certificaciones (Cisco Networking Academy)</div>
+            
+            <div class="section">
+                <h2 class="section-title">Formación</h2>
+                <h3 class="education-subtitle">Cursos y certificaciones (Cisco Networking Academy)</h3>
                 
                 <div class="education-item">
-                    <div class="education-title">IT Essentials</div>
-                    <div class="education-date">Ago 2024 - Dic 2024</div>
+                    <h4 class="education-title">IT Essentials</h4>
+                    <p class="education-details">Ago 2024 - Dic 2024</p>
                 </div>
                 
                 <div class="education-item">
-                    <div class="education-title">Científico de Datos</div>
-                    <div class="education-date">Jul 2024 - Ago 2024</div>
+                    <h4 class="education-title">Científico de Datos</h4>
+                    <p class="education-details">Jul 2024 - Ago 2024</p>
                 </div>
                 
                 <div class="education-item">
-                    <div class="education-title">Introducción a la Ciberseguridad</div>
-                    <div class="education-date">Sep 2024</div>
+                    <h4 class="education-title">Introducción a la Ciberseguridad</h4>
+                    <p class="education-details">Sep 2024</p>
                 </div>
                 
                 <div class="education-item">
-                    <div class="education-title">Python Essentials II</div>
-                    <div class="education-date">Mar 2024 - Ago 2024</div>
+                    <h4 class="education-title">Python Essentials II</h4>
+                    <p class="education-details">Mar 2024 - Ago 2024</p>
                 </div>
                 
                 <div class="education-item">
-                    <div class="education-title">Computer Hardware Basics</div>
-                    <div class="education-date">Mar 2024 - May 2024</div>
+                    <h4 class="education-title">Computer Hardware Basics</h4>
+                    <p class="education-details">Mar 2024 - May 2024</p>
                 </div>
             </div>
         </div>
