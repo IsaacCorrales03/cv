@@ -13,212 +13,235 @@
         }
         
         body {
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .container {
             display: flex;
-            max-width: 1000px;
             min-height: 100vh;
-            margin: 0 auto;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
         
-        .left-column {
+        .sidebar {
             width: 33%;
             background-color: #2c3e50;
             color: white;
-            padding: 30px;
+            padding: 2rem;
         }
         
-        .right-column {
+        .main-content {
             width: 67%;
             background-color: white;
-            padding: 30px;
+            padding: 2rem;
         }
         
-        .profile-name {
-            font-size: 28px;
+        .name {
+            font-size: 2rem;
             font-weight: 600;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #3498db;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid white;
+            padding-bottom: 0.5rem;
+        }
+        
+        .position {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
         }
         
         .contact-info {
-            margin-bottom: 30px;
+            margin-bottom: 2rem;
         }
         
-        .info-item {
+        .contact-item {
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 0.8rem;
         }
         
-        .info-icon {
+        .contact-icon {
             margin-right: 10px;
             width: 20px;
             text-align: center;
         }
         
         .section-title {
-            font-size: 20px;
+            font-size: 1.3rem;
             font-weight: 600;
-            margin-bottom: 15px;
-            color: #3498db;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
-        .languages-list, .skills-list {
-            list-style-type: none;
+        .sidebar .section-title {
+            border-bottom: 2px solid white;
+            padding-bottom: 0.3rem;
         }
         
-        .languages-list li, .skills-list li {
-            margin-bottom: 8px;
+        .main-content .section-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 0.3rem;
         }
         
-        .language-level {
-            display: inline-block;
-            margin-left: 10px;
+        .language-item, .skill-item {
+            margin-bottom: 0.5rem;
+        }
+        
+        .language-level, .skill-level {
+            display: flex;
+            margin-top: 0.2rem;
         }
         
         .level-dot {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
-            background-color: #3498db;
-            margin-right: 3px;
+            background-color: white;
+            margin-right: 5px;
         }
         
         .level-dot.empty {
             background-color: transparent;
-            border: 1px solid #3498db;
+            border: 1px solid white;
         }
         
-        .right-section {
-            margin-bottom: 30px;
+        .job {
+            margin-bottom: 1.5rem;
         }
         
-        .experience-item, .education-item {
-            margin-bottom: 20px;
-        }
-        
-        .job-title, .course-title {
+        .job-title {
             font-weight: 600;
-            font-size: 16px;
+            font-size: 1.1rem;
+            color: #2c3e50;
         }
         
-        .job-details, .course-details {
-            color: #7f8c8d;
-            font-size: 14px;
-            margin-bottom: 8px;
+        .job-details {
+            display: flex;
+            justify-content: space-between;
+            font-style: italic;
+            margin: 0.3rem 0;
+            color: #777;
         }
         
-        .job-description, .course-description {
-            font-size: 14px;
+        .education-item {
+            margin-bottom: 1rem;
+        }
+        
+        .education-title {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .education-date {
+            font-style: italic;
+            color: #777;
+            font-size: 0.9rem;
         }
         
         .personal-description {
-            line-height: 1.8;
-            margin-bottom: 30px;
+            margin-bottom: 2rem;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Columna izquierda (33%) -->
-        <div class="left-column">
-            <div class="profile-name">Isaac Bolaños Corrales</div>
-            
-            <div class="contact-info">
-                <div class="info-item">
-                    <div class="info-icon">✉</div>
-                    <div>bolanosisaac45@gmail.com</div>
-                </div>
-                <div class="info-item">
-                    <div class="info-icon">☎</div>
-                    <div>+506 606-03711</div>
-                </div>
+    <!-- Columna Lateral (33%) -->
+    <div class="sidebar">
+        <div class="name">Isaac Bolaños Corrales</div>
+        <div class="position">Técnico en soporte IT</div>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-icon">&#9743;</div>
+                <div>+506 606-03711</div>
             </div>
-            
-            <div class="section-title">Idiomas</div>
-            <ul class="languages-list">
-                <li>
-                    Español
-                    <span class="language-level">
-                        <span class="level-dot"></span>
-                        <span class="level-dot"></span>
-                        <span class="level-dot"></span>
-                        <span class="level-dot"></span>
-                        <span class="level-dot"></span>
-                    </span>
-                </li>
-                <li>
-                    Inglés
-                    <span class="language-level">
-                        <span class="level-dot"></span>
-                        <span class="level-dot"></span>
-                        <span class="level-dot"></span>
-                        <span class="level-dot empty"></span>
-                        <span class="level-dot empty"></span>
-                    </span>
-                </li>
-            </ul>
-            
-            <div class="section-title" style="margin-top: 30px;">Características</div>
-            <ul class="skills-list">
-                <li>Autodidacta</li>
-                <li>Innovador</li>
-                <li>Práctico y aplicado</li>
-                <li>Multidisciplinario</li>
-                <li>Apasionado por la tecnología</li>
-            </ul>
+            <div class="contact-item">
+                <div class="contact-icon">&#9993;</div>
+                <div>bolanosisaac45@gmail.com</div>
+            </div>
         </div>
         
-        <!-- Columna derecha (67%) -->
-        <div class="right-column">
-            <div class="right-section">
-                <div class="section-title">Perfil Profesional</div>
-                <p class="personal-description">
-                    Soy una persona autodidacta, creativa y resolutiva, apasionada por la innovación y el aprendizaje constante. 
-                    Me gusta enfrentar desafíos con una mentalidad analítica y adaptable, buscando siempre optimizar y personalizar soluciones.
-                </p>
-            </div>
-            
-            <div class="right-section">
-                <div class="section-title">Experiencia Laboral</div>
-                <div class="experience-item">
-                    <div class="job-title">Desarrollador Full Stack</div>
-                    <div class="job-details">Zenith | Remoto | Nov 2024 - Feb 2025</div>
-                    <div class="job-description">
-                        Desarrollo de una aplicación web completa de inicio a fin.
-                    </div>
+        <div class="section">
+            <div class="section-title">Idiomas</div>
+            <div class="language-item">
+                <div>Español</div>
+                <div class="language-level">
+                    <div class="level-dot"></div>
+                    <div class="level-dot"></div>
+                    <div class="level-dot"></div>
+                    <div class="level-dot"></div>
+                    <div class="level-dot"></div>
                 </div>
             </div>
-            
-            <div class="right-section">
-                <div class="section-title">Formación: Cursos y Certificaciones</div>
-                <div class="education-item">
-                    <div class="course-title">IT Essentials</div>
-                    <div class="course-details">Cisco Networking Academy | Ago 2024 - Dic 2024</div>
+            <div class="language-item">
+                <div>Inglés</div>
+                <div class="language-level">
+                    <div class="level-dot"></div>
+                    <div class="level-dot"></div>
+                    <div class="level-dot"></div>
+                    <div class="level-dot empty"></div>
+                    <div class="level-dot empty"></div>
                 </div>
-                <div class="education-item">
-                    <div class="course-title">Científico de Datos</div>
-                    <div class="course-details">Cisco Networking Academy | Jul 2024 - Ago 2024</div>
+            </div>
+        </div>
+        
+        <div class="section" style="margin-top: 2rem;">
+            <div class="section-title">Características</div>
+            <div class="skill-item">&#10003; Autodidacta</div>
+            <div class="skill-item">&#10003; Innovador</div>
+            <div class="skill-item">&#10003; Práctico y aplicado</div>
+            <div class="skill-item">&#10003; Multidisciplinario</div>
+            <div class="skill-item">&#10003; Apasionado por la tecnología</div>
+        </div>
+    </div>
+    
+    <!-- Contenido Principal (67%) -->
+    <div class="main-content">
+        <div class="section">
+            <div class="section-title">Perfil</div>
+            <div class="personal-description">
+                Soy una persona autodidacta, creativa y resolutiva, apasionada por la innovación y el aprendizaje constante. Me gusta enfrentar desafíos con una mentalidad analítica y adaptable, buscando siempre optimizar y personalizar soluciones.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Experiencia Laboral</div>
+            <div class="job">
+                <div class="job-title">Desarrollador Full Stack</div>
+                <div class="job-details">
+                    <div>Zenith, Remoto</div>
+                    <div>Nov 2024 - Feb 2025</div>
                 </div>
-                <div class="education-item">
-                    <div class="course-title">Introducción a la Ciberseguridad</div>
-                    <div class="course-details">Cisco Networking Academy | Sep 2024</div>
+                <div class="job-description">
+                    Desarrollo de una aplicación web completa de inicio a fin.
                 </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Formación</div>
+            <div class="education-section">
+                <div class="education-subtitle">Cursos y certificaciones (Cisco Networking Academy)</div>
+                
                 <div class="education-item">
-                    <div class="course-title">Python Essentials II</div>
-                    <div class="course-details">Cisco Networking Academy | Mar 2024 - Ago 2024</div>
+                    <div class="education-title">IT Essentials</div>
+                    <div class="education-date">Ago 2024 - Dic 2024</div>
                 </div>
+                
                 <div class="education-item">
-                    <div class="course-title">Computer Hardware Basics</div>
-                    <div class="course-details">Cisco Networking Academy | Mar 2024 - May 2024</div>
+                    <div class="education-title">Científico de Datos</div>
+                    <div class="education-date">Jul 2024 - Ago 2024</div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-title">Introducción a la Ciberseguridad</div>
+                    <div class="education-date">Sep 2024</div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-title">Python Essentials II</div>
+                    <div class="education-date">Mar 2024 - Ago 2024</div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-title">Computer Hardware Basics</div>
+                    <div class="education-date">Mar 2024 - May 2024</div>
                 </div>
             </div>
         </div>
